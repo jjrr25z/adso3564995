@@ -14,5 +14,5 @@
 
  ---
  ### links
- - [ADSO Files DRIVE](https://tinyur1.com/wnkk334u)
+ - [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
  - 
