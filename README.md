@@ -3,7 +3,7 @@
 ## Juan José Rodríguez
 ### Analisis y desarrollo de software
 ***Centro de procesos Industriales Regional Caldas***
->sena -Regional Caldas
+>sena - Regional Caldas
 ---
 |ID  |THEME       |DESCRIPTION                           | 
 |--- |---         |---                                   |
