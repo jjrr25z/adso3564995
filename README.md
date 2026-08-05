@@ -7,9 +7,9 @@
 ---
 |ID  |THEME       |DESCRIPTION                           | 
 |--- |---         |---                                   |
-|01. |Emet        | workflow - Markup & styling          |
-|02. |HTML        | structure - Hypertext Markup lenguaje|
-|03. |CSS         | Look & feel - cascading Style sheet  |
+|01. |Emet        | Worwkflow - Markup & styling         |
+|02. |HTML        | Structure - Hypertext Markup lenguaje|
+|03. |CSS         | Look & feel - Cascading Style sheet  |
 |04. |JAVASCRIPT  | Behavior - Programing Lenguaje       |
 
  ---
