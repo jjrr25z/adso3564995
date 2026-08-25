@@ -3,11 +3,63 @@
  
 /* Styles */
 body {
-    background: linear-gradient(180grad, #434644, #2c332e);
+    background: linear-gradient(180grad, #09dd42, #2c332e);
     color: #fff9;
     font-family: Poppins;
     min-height: 100dvh;
- 
+    &.emmet{
+        background-color: linear-gradient(to top, #7acb16, #192a05);
+        color: #0009    ;
+    section{    
+        h2.subtitle{ 
+            background-color: #7acb16;
+            border-radius: 8px;
+            color: #0009;
+            display: flex;
+            font-weight: 500;
+            justify-content: space-between;
+            margin: 0%;
+            padding: 0.4rem;
+            span {
+                align-items: center;
+                background-color: #0009;
+                border-radius: 50%;
+                color: #7acb16;
+                display: flex;
+                height: 30px;
+                justify-content: center;
+                width: 30px
+                
+
+                
+                
+                
+            
+            }
+        
+        }
+        small{
+            color: #fff9;
+        }
+        h3{ 
+            margin: 0%;
+            border-bottom: 1px dotted #7acb16;
+        }
+        p {
+            color: #fff9;
+            font-size: 1.2rem;
+        }
+        xmp {
+            background-color: #0009;
+            border-radius: 8px;
+            color: #fff;
+            padding: 0.4rem;
+
+
+
+        }
+    }
+    }
     main {
         background: linear-gradient(to bottom, #0009, #0000);
         border-radius: 0.6rem;
@@ -58,7 +110,13 @@ body {
                 margin: 0;
             }
         }
- 
+        section {
+            background-color: #0009;
+            border-radius: 8px;
+            padding: 0.6rem;
+            margin: 1rem auto;
+            width: 380;
+        }
         menu.mmenu {
             display: flex;
             align-items: center;
