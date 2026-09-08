@@ -6,8 +6,50 @@ body {
     color: #fff9;
     font-family: Poppins;
     min-height: 100dvh;
-        &.emmet {
+
+    &.html {
+        background: linear-gradient(to top, #e44d26, #1f0a05);
+        background-attachment: fixed;
+        color: #f9966baa;
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #f9966baa;
+                }
+                img {
+                    border: 4px solid #f9966baa;
+                }
+            }
+           menu.mmenu {
+                a:is(:link, :visited) {
+                    &:hover {
+                        background-color: #e44d26;
+                        aside {
+                            h4 {
+                                color: #fff9;
+                            }
+                        }
+                    }
+                    span {
+                        background-color: #e44d26;
+                        height: 50px;
+                        font-size: 1.4rem;
+                        width: 50px;
+                        color: #fff9;
+                    }
+                    aside {
+                        h4 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+           } 
+        }
+    }
+
+    &.emmet {
         background: linear-gradient(to top, #7acb16, #192a05);
+        background-attachment: fixed;
         color: #baffa9aa;
 
         main {
@@ -16,8 +58,7 @@ body {
                     border-bottom: 2px solid #baffa9aa;
                 }
                 img {
-                    border: 4px solid #baffa933;  
-
+                    border: 4px solid #baffa933;
                 }
             }
             section {
@@ -34,6 +75,7 @@ body {
                     span {
                         align-items: center;
                         background-color: #0009;
+                        font-size: 0.8rem;
                         border-radius: 50%;
                         color: #fffc;
                         display: flex;
@@ -110,12 +152,10 @@ body {
             img {
                 margin: 2rem auto;
                 border: 4px solid #eddcb933;
-                object-position: top left;
-                border-radius: 50%;
+                border-radius: 50%;      
                 object-fit: cover;
                 height: 280px;
                 width: 280px;
-                
             }
             h3 {
                 font-size: 1.2rem;
