@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-Challenge Layout</title>
+
+    <style>
+        body {
+            background-color: #17a053;
+            border: 10px solid #fff;
+            padding: 0;
+            margin: 0;
+            min-height: 100dvh;
+        }
+
+        main {
+            border: 4px solid yellow;
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        header figure.logo {
+            background: url(imgs/spriteweb.png) no-repeat;
+            background-position: -20px -430px;
+            height: 130px;
+            margin: 2rem auto;
+            width: 170px;
+        }
+
+        header menu {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            gap: 30px;
+        }
+
+        header menu a {
+            color: #fff;
+            display: block;
+            height: 25px;
+            width: 250px;
+            padding: 14px 0;
+            background-color: #196e3b;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 900;
+            border-bottom: 7px solid white;
+            text-transform: uppercase;
+        }
+
+        section.contenedor-sprites {
+            display: flex;
+            justify-content: center;
+            padding: 0.8rem;
+            background-color: #196e3b;
+            min-height: 200px;
+        }
+
+        section.contenedor-sprites .sprite {
+            background: url(imgs/spriteweb.png) no-repeat;
+            background-position: -480px -5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            height: 200px;
+            width: 328px;
+            border: 2px solid white;
+        }
+
+        section.contenedor-sprites .sprite h3 {
+            text-align: center;
+            font-size: x-large;
+            font-weight: 900;
+            background-color: #fff9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+            margin: 0;
+        }
+
+        section.primera-seccion {
+            background-color: #196e3b;
+            margin: 30px auto;
+            width: 940px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        div.info {
+            background-color: white;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 150px;
+            padding: 15px;
+            margin: 0;
+        }
+
+        div.info .imagen-info {
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            width: 109px;
+        }
+
+        div.info .logo-info {
+            background-position: -282px -499px;
+            height: 95px;
+        }
+
+        div.info .lata-info {
+            background-position: -88px -210px;
+            height: 173px;
+        }
+
+        div.info p {
+            width: 50%;
+            margin: 0;
+            font-size: 13px;
+            text-align: justify;
+            line-height: 1.75;
+        }
+        footer {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            gap: 2.5rem;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        div.third {
+            background: url(imgs/spriteweb.png) no-repeat;
+            background-position: -500px -420px;
+            height: 180px;
+            width: 245px;
+        }
+        div.link {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            gap: 3.5rem;
+        }
+        div.link a {
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            padding-bottom: 10px;
+            border-bottom: 7px solid white
+        }
+        
+
+        
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+
+            <menu>
+                <a href="">Inicio</a>
+                <a href="">Nosotros</a>
+                <a href="">Portafolio</a>
+                <a href="">Servicios</a>
+                <a href="">Contacto</a>
+            </menu>
+        </header>
+
+        <section class="contenedor-sprites">
+            <div class="sprite">
+                <h3>Sprite 01</h3>
+            </div>
+
+            <div class="sprite">
+                <h3>Sprite 02</h3>
+            </div>
+
+            <div class="sprite">
+                <h3>Sprite 03</h3>
+            </div>
+        </section>
+|
+        <section class="primera-seccion">
+            <div class="info">
+                <div class="imagen-info logo-info"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis harum asperiores quis iure vel, soluta dolorem, doloribus facere atque perferendis nihil voluptate sint tenetur unde. Ipsa id, in sapiente natus ipsum eos impedit unde consequatur cupiditate totam inventore maxime reprehenderit nostrum saepe reiciendis, aliquid nihil molestias quae quaerat facilis iusto sunt. Dolorem adipisci tempora perferendis, architecto deleniti delectus. Iste, blanditiis?
+                </p>
+
+                <div class="imagen-info lata-info"></div>
+            </div>
+
+            <div class="info">
+                <div class="imagen-info logo-info"></div>
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, soluta quibusdam? Dolore vel sint sit non maxime architecto exercitationem sunt accusamus necessitatibus pariatur laborum, aliquid neque molestias. Accusantium voluptatibus, ea, vero at reiciendis aliquam ad dignissimos soluta quisquam sapiente harum quaerat. Quo distinctio neque atque reprehenderit cumque optio obcaecati vel iure voluptate reiciendis aspernatur, inventore eum saepe praesentium error expedita!
+                </p>
+
+                <div class="imagen-info lata-info"></div>
+            </div>
+
+            <div class="info">
+                <div class="imagen-info logo-info"></div>
+
+                <p>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error cumque, ab nam at vero placeat quo autem minus necessitatibus sunt similique ipsam mollitia ea quasi est aperiam expedita, illum earum et recusandae nulla repellat reprehenderit! Accusamus unde repudiandae dolores pariatur quae? Porro, alias ipsum assumenda id perferendis officiis, obcaecati quod impedit atque libero nesciunt adipisci quibusdam, reprehenderit odit sit?
+                </p>
+
+                <div class="imagen-info lata-info"></div>
+            </div>
+        </section>
+        <footer>
+            <div class="third"></div>
+            <div class="link">
+                <a href="#">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Portafolio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
