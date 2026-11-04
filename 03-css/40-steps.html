@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Popular y Despecho</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+                        url('imgs/Fondo.jpg') center/cover fixed no-repeat;
+            color: #f0f0f0;
+        }
+
+        /* Logo / Encabezado */
+        .logo {
+            width: 300px;
+            height: 140px;
+            background: url('imgs/logotipo1-.png') center/contain no-repeat;
+            margin: 20px auto;
+        }
+
+        /* Sección de Tarjetas */
+        .cards {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, .45);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            scroll-margin-top: 20px;
+        }
+
+        .card-link {
+            text-decoration: none;
+        }
+
+        .card {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #b33939;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #121212;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .card-link:hover .card {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 71, 87, 0.4);
+            border-color: #ff4757;
+        }
+
+        .card figcaption {
+            width: 100%;
+            background: rgba(139, 0, 0, 0.85);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s ease, padding 0.3s ease;
+        }
+
+        .card-link:hover figcaption {
+            background: rgba(255, 71, 87, 0.9);
+            padding: 12px;
+        }
+
+        /* Fondos individuales de tarjetas */
+        .dario { background-image: url('imgs/dariogomez.jpg'); }
+        .posada { background-image: url('imgs/luisalberto.jpg'); }
+        .burbano { background-image: url('imgs/fernando.jpg'); }
+        .gaucho { background-image: url('imgs/caballerogaucho.jpg'); }
+
+        /* Sección de Descripciones / Biografías */
+        .info {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            scroll-margin-top: 20px;
+        }
+
+        .personaje {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 71, 87, 0.2);
+            scroll-margin-top: 30px;
+        }
+
+        .personaje:hover {
+            background: rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(255, 71, 87, 0.5);
+            box-shadow: 0 8px 30px rgba(255, 71, 87, 0.15);
+        }
+
+        .personaje:target {
+            background: rgba(139, 0, 0, 0.75);
+            border: 1px solid #ff4757;
+            box-shadow: 0 0 25px rgba(255, 71, 87, 0.6);
+            transform: scale(1.02);
+        }
+
+        .personaje p {
+            flex: 1;
+            text-align: justify;
+            line-height: 1.7;
+            font-weight: 400;
+            color: #f0f0f0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s ease;
+        }
+
+        .personaje:hover p {
+            color: #ff6b81;
+        }
+
+        /* Imágenes descriptivas de cada biografía */
+        .dario-img, .posada-img, .burbano-img, .gaucho-img {
+            width: 180px;
+            height: 180px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 8px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 10px rgba(255, 71, 87, 0.2));
+        }
+
+        .personaje:hover .dario-img,
+        .personaje:hover .posada-img,
+        .personaje:hover .burbano-img,
+        .personaje:hover .gaucho-img {
+            transform: scale(1.05) rotate(-3deg);
+            filter: drop-shadow(0 0 20px rgba(255, 71, 87, 0.4));
+        }
+
+        .dario-img { background-image: url('imgs/dariogomez.jpg'); }
+        .posada-img { background-image: url('imgs/luisalberto.jpg'); }
+        .burbano-img { background-image: url('imgs/fernando.jpg'); }
+        .gaucho-img { background-image: url('imgs/caballerogaucho.jpg'); }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            font-weight: 300;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer:hover {
+            color: #ff4757;
+            transform: scale(1.02);
+        }
+
+        /* Media Queries */
+        @media (min-width: 1040px) {
+            .card {
+                width: 210px;
+                height: 210px;
+            }
+
+            .personaje {
+                padding: 30px;
+                gap: 35px;
+            }
+
+            .dario-img, .posada-img, .burbano-img, .gaucho-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .logo {
+                width: 340px;
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 1039px) and (min-width: 769px) {
+            .card {
+                width: 180px;
+                height: 180px;
+            }
+
+            .personaje {
+                gap: 20px;
+                padding: 18px;
+            }
+
+            .dario-img, .posada-img, .burbano-img, .gaucho-img {
+                width: 160px;
+                height: 160px;
+            }
+
+            .logo {
+                width: 260px;
+                height: 110px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                padding: 15px;
+                gap: 12px;
+            }
+
+            .card {
+                width: 150px;
+                height: 150px;
+            }
+
+            .card figcaption {
+                font-size: 15px;
+                padding: 8px;
+            }
+
+            .personaje {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .personaje p {
+                text-align: center;
+            }
+
+            .logo {
+                width: 220px;
+                height: 90px;
+            }
+
+            .dario-img, .posada-img, .burbano-img, .gaucho-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .personaje:hover .dario-img,
+            .personaje:hover .posada-img,
+            .personaje:hover .burbano-img,
+            .personaje:hover .gaucho-img {
+                transform: scale(1.05) rotate(0deg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 170px;
+                height: 75px;
+                margin: 15px auto;
+            }
+
+            .card {
+                width: 135px;
+                height: 135px;
+            }
+
+            .card figcaption {
+                font-size: 13px;
+                padding: 6px;
+            }
+
+            .personaje {
+                padding: 15px;
+                gap: 12px;
+            }
+
+            .personaje p {
+                font-size: 0.9rem;
+            }
+
+            .dario-img, .posada-img, .burbano-img, .gaucho-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .cards {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            footer {
+                padding: 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo" id="top"></div>
+
+    <!-- Sección de Tarjetas -->
+    <section class="cards" id="tarjetas">
+        <a href="#bio-dario" class="card-link">
+            <div class="card dario">
+                <figcaption>Darío Gómez</figcaption>
+            </div>
+        </a>
+
+        <a href="#bio-posada" class="card-link">
+            <div class="card posada">
+                <figcaption>Luis A. Posada</figcaption>
+            </div>
+        </a>
+
+        <a href="#bio-burbano" class="card-link">
+            <div class="card burbano">
+                <figcaption>Fernando Burbano</figcaption>
+            </div>
+        </a>
+
+        <a href="#bio-gaucho" class="card-link">
+            <div class="card gaucho">
+                <figcaption>Caballero Gaucho</figcaption>
+            </div>
+        </a>
+    </section>
+
+    <!-- Sección de Descripciones / Biografías -->
+    <section class="info" id="descripciones">
+        <div class="personaje" id="bio-dario">
+            <aside class="dario-img"></aside>
+            <p>
+                <strong>Darío Gómez</strong>, conocido como "El Rey del Despecho", fue un emblemático cantante y compositor colombiano. 
+                Sus canciones de amor, traición y despecho marcaron generaciones enteras y se convirtieron en himnos de la música popular en todo el país.
+            </p>
+        </div>
+
+        <div class="personaje" id="bio-posada">
+            <aside class="posada-img"></aside>
+            <p>
+                <strong>Luis Alberto Posada</strong> es uno de los máximos exponentes del género popular y de despecho en Colombia. 
+                Con su inconfundible voz y sentimiento, ha cautivado al público durante décadas con éxitos inmortales de cantina y bohemia.
+            </p>
+        </div>
+
+        <div class="personaje" id="bio-burbano">
+            <aside class="burbano-img"></aside>
+            <p>
+                <strong>Fernando Burbano</strong>, una de las voces más queridas de la música popular colombiana, se ha ganado el corazón 
+                de los seguidores del despecho gracias a la potencia y sentimiento interpretativo en cada uno de sus románticos y dolidos temas.
+            </p>
+        </div>
+
+        <div class="personaje" id="bio-gaucho">
+            <aside class="gaucho-img"></aside>
+            <p>
+                <strong>El Caballero Gaucho</strong> (Luis Ángel Ramírez Saldarriaga) es considerado un verdadero pionero y leyenda de la música 
+                popular colombiana. Su estilo único con guitarra y letras profundas sentó las bases de la música de despecho tradicional.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 - Homenaje a la Música Popular y de Despecho</p>
+    </footer>
+
+</body>
+
+</html>

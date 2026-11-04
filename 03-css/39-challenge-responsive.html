@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Popular  </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+        }
+
+        body {
+            background:linear-gradient(#35000cbd, #2e050ce3),
+                       url(imgs/Fondo.bmp) center/cover fixed no-repeat;
+            font-family: sans-serif;
+        }
+
+        main {
+            width: 1000px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            background: url(imgs/logotipo1-.png) no-repeat center;
+            background-size: contain;
+            height: 160px;
+            width: 400px;
+            max-width: 100%;
+            margin: 0 auto 15px;
+        }
+
+        header h1 {
+            color: #ffcc80;
+            font-size: 2.3rem;
+        }
+
+        .contenedor {
+            max-width: 100%;
+            width: 960px;
+            padding: 20px 70px;
+            margin: 0 auto;
+            display: flex;
+            cursor: pointer;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            background: linear-gradient( 135deg,#57000cdd,#250006e6);
+            border: 2px solid #a52a2a;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #0009;
+            margin-bottom: 30px;
+        }
+
+        .carta {
+            position: relative;
+            width: 185px;
+            background-color: #240000;
+            border: 2px solid #a52a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px #0009;
+        }
+
+        .carta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px #ff000066;
+        }
+
+        .carta img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .etiqueta {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 5px;
+            background-color: #3d0000dd;
+            color: #ffcc80;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .bloque {
+            margin-bottom: 25px;
+            padding: 30px;
+            background-color: #430000cc;
+            border: 1px solid #a52a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #0006;
+        }
+
+        .bloque img {
+            float: left;
+            width: 180px;
+            height: 185px;
+            object-fit: cover;
+            margin-right: 25px;
+            border-radius: 12px;
+            border: 3px solid #a52a2a;
+        }
+        .descripcion {
+            overflow: hidden;
+            font-size: 1rem;
+            color: #ffe6d5;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .descripcion h2 {
+            color: #ffcc80;
+            margin-bottom: 12px;
+        }
+              @media (max-width: 1023px) {
+            body {
+                main {
+                    width: 700px;
+
+                    .contenedor {
+                        width: 100%;
+                        padding: 30px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 30px;
+                }
+            }
+        }
+        @media (max-width: 767px) {               
+            main {
+                width: 100%;
+                padding: 10px;
+            }
+        
+            header {
+                padding: 15px 5px;
+            }
+        
+            .logo {
+                width: 100%;
+                height: 220px;
+            }
+        
+            header h1 {
+                font-size: 1.5rem;
+            }
+        
+            header p {
+                font-size: 0.8rem;
+            }
+        
+            .contenedor {
+                width: 100%;
+                padding: 25px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+        
+            .carta {
+                width: 200px;
+                margin: 0;
+            }
+        
+            .carta img {
+                height: 220px;
+            }
+        
+            .bloque {
+                padding: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        
+            .bloque img {
+                float: none;
+                display: block;
+                width: 180px;
+                height: 180px;
+                margin: 0 auto 20px;
+            }
+        
+            .descripcion {
+                font-size: 0.9rem;
+                text-align: center;
+                line-height: 1.6;
+            }
+        
+            .descripcion h2 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <header>
+
+        <figure class="logo"></figure>
+
+        <h1>MÚSICA POPULAR COLOMBIANA</h1>
+
+
+    </header>
+
+    <div class="contenedor">
+
+        <div class="carta">
+            <img src="imgs/dario.jpg" alt="Darío Gómez">
+            <div class="etiqueta">Darío Gómez</div>
+        </div>
+
+        <div class="carta">
+            <img src="imgs/luisalberto.jpg" alt="Luis Alberto Posada">
+            <div class="etiqueta">Luis Alberto Posada</div>
+        </div>
+
+        <div class="carta">
+            <img src="imgs/caballerogaucho.jpg" alt="Caballero Gaucho">
+            <div class="etiqueta">Caballero Gaucho</div>
+        </div>
+
+        <div class="carta">
+            <img src="imgs/fernando.jpg" alt="Fernando Burbano">
+            <div class="etiqueta">Fernando Burbano</div>
+        </div>
+
+    </div>
+
+    <div class="bloque">
+
+        <img src="imgs/dario.jpg" alt="Darío Gómez">
+
+        <div class="descripcion">
+            <h2>Darío Gómez</h2>
+
+            Darío de Jesús Gómez Zapata, conocido como el Rey del
+            Despecho, fue uno de los cantantes y compositores más
+            reconocidos de la música popular colombiana. Nació en
+            San Jerónimo, Antioquia. 
+        </div>
+
+    </div>
+
+    <div class="bloque">
+
+        <img src="imgs/luisalberto.jpg" alt="Luis Alberto Posada">
+
+        <div class="descripcion">
+            <h2>Luis Alberto Posada</h2>
+
+            Luis Alberto Posada es uno de los grandes representantes
+            de la música popular colombiana. Se ha destacado por su
+            potente voz y sus canciones relacionadas con el amor,
+            el despecho y las experiencias de la vida.
+        </div>
+
+    </div>
+
+    <div class="bloque">
+
+        <img src="imgs/caballerogaucho.jpg" alt="Caballero Gaucho">
+
+        <div class="descripcion">
+            <h2>Caballero Gaucho</h2>
+
+            Luis Ángel Ramírez Saldarriaga, conocido artísticamente
+            como el Caballero Gaucho, fue un reconocido cantante
+            colombiano de música popular y música de despecho.
+            Su estilo romántico y sentimental lo convirtió en una
+            figura importante de la música colombiana.
+        </div>
+
+    </div>
+
+    <div class="bloque">
+
+        <img src="imgs/fernando.jpg" alt="Fernando Burbano">
+
+        <div class="descripcion">
+            <h2>Fernando Burbano</h2>
+
+            Fernando Burbano es un cantante colombiano reconocido
+            dentro del género de música popular. Se ha destacado
+            por interpretar canciones de despecho.
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>
